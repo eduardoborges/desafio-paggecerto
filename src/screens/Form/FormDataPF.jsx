@@ -2,14 +2,7 @@ import React from 'react';
 import { Link }  from 'react-router-dom';
 import fieldsTree from '../../fields.json';
 
-import FormInput from '../../components/FormInput';
-import FormSelect from '../../components/FormSelect';
-import FormRadio from '../../components/FormRadio';
-
-
 const FormDadosPF = ({onChange, handleSetTypePerson, renderFields, ...props}) => {
-    const FORM_STATE = props.state.FORM_DATA;
-    console.log(FORM_STATE)
     return(
         <div className="form-data-pf">
 
@@ -20,8 +13,6 @@ const FormDadosPF = ({onChange, handleSetTypePerson, renderFields, ...props}) =>
                 <div className="columns is-multiline">
                 { renderFields( fieldsTree.pf_fields ) }
                 </div>
-
-                
 
                 <hr/>
 
