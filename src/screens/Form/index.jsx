@@ -3,14 +3,11 @@ import { Switch, Route } from 'react-router-dom';
 
 // steps of form
 import FormSelectType from './FormSelectType'
-import FormDataPF from './FormDataPF';
-import FormDataPJ from './FormDataPJ';
+import FormData from './FormData';
 import FormDataMoneyReceipt from "./FormDataMoneyReceipt";
 import FormBankInfo from "./FormBankInfo";
 import FormTerms from "./FormTerms";
 import FormFinish from "./FormFinish";
-
-
 
 // small components 
 import StepsSwitch from '../../components/StepSwitch';
@@ -38,6 +35,7 @@ class FormContainer extends Component {
      */
     handleSetTypePerson = (event) => {
         const { value } = event.target;
+        console.log( value )
         this.setState({ PERS_TYPE: Number(value) })
     }
 
@@ -49,7 +47,13 @@ class FormContainer extends Component {
         event.preventDefault();
         const { name, value } = event.target;
 
-        this.setState(prevState => ({ FORM_DATA: { ...prevState.FORM_DATA, [name]:value} }) );
+        this.setState( prevState => ({
+                FORM_DATA: {
+                    ...prevState.FORM_DATA,
+                    [name]:value
+                }
+            })
+        );
     }
 
     renderFields = (fields = []) => {
@@ -87,7 +91,7 @@ class FormContainer extends Component {
         return (
             <Switch>
                 <Route path="/cadastro" exact render={ ()=> <FormSelectType {...this} /> } />
-                <Route path="/cadastro/dados" render={ ()=> PERS_TYPE === 0 ? <FormDataPF {...this} /> : <FormDataPJ {...this} />  } />
+                <Route path="/cadastro/dados" render={ ()=> <FormData {...this} />  } />
                 <Route path="/cadastro/repasse" render={ ()=> <FormDataMoneyReceipt {...this} /> } />
                 <Route path="/cadastro/banco" render={ ()=> <FormBankInfo {...this} /> } />
                 <Route path="/cadastro/termos" render={ ()=> <FormTerms {...this} /> } />

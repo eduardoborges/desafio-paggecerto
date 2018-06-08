@@ -14,7 +14,7 @@ const FormInput = ({label, onChange, name, options = [], erros = [], defaultValu
                         value={item.value}
                         name={name}
                         onChange={onChange}
-                        checked={item.selected || item.value === props.defaultValue }
+                        onClick={onChange}
                         {...props} />
                     <label for={`radio-form-${name}`}> {item.label} </label>
                 </Fragment>
