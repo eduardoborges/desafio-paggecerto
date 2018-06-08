@@ -1,0 +1,73 @@
+{
+    "pf_fields": [
+        {
+           "label": "Nome Completo",
+           "name": "nome",
+           "type": "text"
+        },
+        {
+           "label": "CPF",
+           "name": "cpf",
+           "type": "number"
+        },
+        {
+           "label": "Sexo",
+           "name": "sexo",
+           "type": "radio",
+           "options": [
+              {
+                 "label": "Masculino",
+                 "value": "m"
+              },
+              {
+                 "label": "Feminino",
+                 "value": "f"
+              }
+           ]
+        },
+        {
+           "label": "Data de Nascimento",
+           "name": "data_nasc",
+           "type": "date"
+        },
+        {
+           "label": "CEP",
+           "name": "cep",
+           "type": "number"
+        },
+        {
+           "label": "Complemento",
+           "name": "complemento",
+           "type": "text"
+        },
+        {
+           "label": "Celular",
+           "name": "telefone_celular",
+           "type": "number"
+        },
+        {
+           "label": "Telefone Fixo",
+           "name": "telefone_fixo",
+           "type": "number"
+        },
+        {
+           "label": "Ramo de Atividade",
+           "name": "ramo_atividade",
+           "type": "select",
+           "options": [
+              {
+                 "label": "Nao faço ideia",
+                 "value": 1
+              },
+              {
+                 "label": "Das opcoes",
+                 "value": 2
+              },
+              {
+                 "label": "Aqui",
+                 "value": 3
+              }
+           ]
+        }
+     ]
+}
