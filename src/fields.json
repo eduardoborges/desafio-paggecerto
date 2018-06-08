@@ -69,5 +69,72 @@
               }
            ]
         }
-     ]
+    ],
+    "pj_fields": [
+        {
+            "label": "Razão Social",
+            "name": "razao_social",
+            "type": "text"
+        },
+        {
+            "label": "Nome Fantasia",
+            "name": "nome_fantasia",
+            "type": "text"
+        },
+        {
+            "label": "CNPJ",
+            "name": "cnpj",
+            "type": "number"
+        },
+        {
+            "label": "CEP",
+            "name": "cep",
+            "type": "number"
+        },
+        {
+            "label": "Numero",
+            "name": "numero",
+            "type": "number"
+        },
+        {
+            "label": "Telefone Fixo",
+            "name": "telefone_fixo",
+            "type": "number"
+        },
+        {
+            "label": "Celular",
+            "name": "telefone_celular",
+            "type": "number"
+        },
+        {
+            "label": "Ramo de Atividade",
+            "name": "ramo_atividade",
+            "type": "select",
+            "options": [
+                {
+                    "label": "Ramo 1",
+                    "value": 1
+                },
+                {
+                    "label": "Ramo 2",
+                    "value": 2
+                }
+            ]
+        },
+        {
+            "label": "Nome do Administrador",
+            "name": "adm_nome",
+            "type": "text"
+        },
+        {
+            "label": "CPF do Administrador",
+            "name": "adm_cpf",
+            "type": "number"
+        },
+        {
+            "label": "Data de Nascimento do Administrador",
+            "name": "adm_data_nasc",
+            "type": "date"
+        }
+    ]
 }
